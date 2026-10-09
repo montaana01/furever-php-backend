@@ -9,6 +9,10 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class HealthController extends AbstractController
 {
+    public function __invoke(): JsonResponse
+    {
+        return $this->yamlHealth();
+    }
     #[Route('/api/health', name: 'health', methods: ['GET'])]
     public function health(): JsonResponse
     {
