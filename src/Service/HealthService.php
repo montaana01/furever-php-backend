@@ -2,15 +2,15 @@
 
 namespace App\Service;
 
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\JsonResponse;
-final class HealthService extends AbstractController
+use App\Contract\HealthServiceInterface;
+
+final class HealthService implements HealthServiceInterface
 {
-    public function getStatus(): JsonResponse
+    public function getStatus(): array
     {
-        return $this->json([
+        return [
             'status' => 200,
             'service' => 'ecommerce-api',
-        ]);
+        ];
     }
 }
