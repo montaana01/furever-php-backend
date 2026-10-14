@@ -2,7 +2,6 @@
 
 namespace App\Controller;
 
-
 use App\Contract\HealthServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
@@ -11,9 +10,8 @@ use Symfony\Component\Routing\Attribute\Route;
 class HealthController extends AbstractController
 {
     public function __construct(
-        private readonly HealthServiceInterface $healthService
-    )
-    {
+        private readonly HealthServiceInterface $healthService,
+    ) {
     }
 
     public function __invoke(): JsonResponse
