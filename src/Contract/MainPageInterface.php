@@ -6,5 +6,5 @@ interface MainPageInterface
 {
     public function getTitle(): string;
     public function getCopyright(): string;
-    public function getMainPageConfiguration(): array;
+    public function getConfiguration(): array;
 }

@@ -4,7 +4,7 @@ namespace App\Service;
 
 use App\Contract\MainPageInterface;
 
-class MainPageService implements MainPageInterface
+final class MainPageService implements MainPageInterface
 {
     private string $title = 'Symfony 7 application';
     private string $copyright = 'made by Alexey Yakovlev';
@@ -19,7 +19,7 @@ class MainPageService implements MainPageInterface
     {
         return $this->copyright;
     }
-    public function getMainPageConfiguration(): array
+    public function getConfiguration(): array
     {
         return [
             'title' => $this->getTitle(),
