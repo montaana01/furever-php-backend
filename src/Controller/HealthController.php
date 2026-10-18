@@ -10,7 +10,6 @@ use Symfony\Component\Routing\Attribute\Route;
 
 class HealthController extends AbstractController
 {
-    private int $number = 10;
     public function __construct(
         private readonly HealthServiceInterface $healthService,
     ) {
@@ -39,9 +38,4 @@ class HealthController extends AbstractController
         return $this->json(['success' => true, 'router' => 'router.php']);
     }
 
-    #[Route('/')]
-    public function homepage(): Response
-    {
-        return $this->render('health/index.html.twig', ['number' => $this->number]);
-    }
 }
