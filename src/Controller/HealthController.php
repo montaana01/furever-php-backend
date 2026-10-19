@@ -5,7 +5,6 @@ namespace App\Controller;
 use App\Contract\HealthServiceInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\JsonResponse;
-use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 class HealthController extends AbstractController
@@ -37,5 +36,4 @@ class HealthController extends AbstractController
     {
         return $this->json(['success' => true, 'router' => 'router.php']);
     }
-
 }

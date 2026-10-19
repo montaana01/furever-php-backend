@@ -9,7 +9,6 @@ final class MainPageService implements MainPageInterface
     private string $title = 'Symfony 7 application';
     private string $copyright = 'made by Alexey Yakovlev';
 
-
     public function getTitle(): string
     {
         return $this->title;
@@ -19,11 +18,12 @@ final class MainPageService implements MainPageInterface
     {
         return $this->copyright;
     }
+
     public function getConfiguration(): array
     {
         return [
             'title' => $this->getTitle(),
-            'copyright'=>$this->getCopyright()];
-        // TODO: Implement getMainPage() method.
+            'copyright' => $this->getCopyright()
+        ];
     }
 }
